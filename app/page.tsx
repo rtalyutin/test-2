@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
 
@@ -40,9 +41,9 @@ export default function Home() {
               <a className="button button-metal" href="tel:+79801560107">
                 Позвонить
               </a>
-              <a className="button button-metal" href="/gallery">
+              <Link className="button button-metal" href="/gallery">
                 Смотреть галерею
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -78,9 +79,9 @@ export default function Home() {
         <div className="page-frame work-invite-inner">
           <p className="section-kicker">ФОТО РАБОТ</p>
           <h2>Ремонт, который можно рассмотреть в деталях.</h2>
-          <a className="metal-link" href="/gallery">
+          <Link className="metal-link" href="/gallery">
             Открыть галерею работ
-          </a>
+          </Link>
         </div>
       </section>
 

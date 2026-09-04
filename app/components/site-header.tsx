@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type SiteHeaderProps = {
   dark?: boolean;
   active?: "gallery";
@@ -5,16 +7,16 @@ type SiteHeaderProps = {
 
 export function SiteHeader({ dark = false, active }: SiteHeaderProps) {
   return (
-    <header className={`site-header ${dark ? "site-header-dark" : ""}`}>
+    <header role="banner" className={`site-header ${dark ? "site-header-dark" : ""}`}>
       <div className="page-frame site-header-inner">
-        <a className="brand" href="/" aria-label="Мастерская Мятый Элемент">
+        <Link className="brand" href="/" aria-label="Мастерская Мятый Элемент">
           МАСТЕРСКАЯ
-        </a>
+        </Link>
         <nav className="site-nav" aria-label="Основная навигация">
-          <a className={active === "gallery" ? "is-active" : ""} href="/gallery">
+          <Link className={active === "gallery" ? "is-active" : ""} href="/gallery" aria-current={active === "gallery" ? "page" : undefined}>
             Галерея
-          </a>
-          <a href="/#contacts">Контакты</a>
+          </Link>
+          <Link href="/#contacts">Контакты</Link>
         </nav>
         <a className="header-call" href="tel:+79801560107" aria-label="Позвонить в мастерскую">
           +7 980 156-01-07

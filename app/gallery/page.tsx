@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import { GalleryGrid } from "../components/gallery-grid";
 import { SiteFooter } from "../components/site-footer";
 import { SiteHeader } from "../components/site-header";
+
+export const metadata: Metadata = {
+  title: "Галерея работ — Мастерская Мятый Элемент",
+};
 
 const works = [
   { src: "/images/gallery/gallery-repair-01.png", alt: "Повреждённая арка автомобиля", label: "Кузов" },
@@ -18,6 +23,8 @@ export default function GalleryPage() {
         <SiteHeader dark active="gallery" />
 
         <section className="gallery-stage page-frame" aria-labelledby="gallery-title">
+          {/* The decorative local asset keeps its intrinsic proportions. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             className="gallery-spraygun"
             src="/images/gallery/gallery-spraygun.png"

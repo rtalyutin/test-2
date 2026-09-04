@@ -1,13 +1,15 @@
+import Link from "next/link";
+
 export function SiteFooter() {
   return (
-    <footer className="site-footer">
+    <footer role="contentinfo" className="site-footer">
       <div className="page-frame site-footer-inner">
-        <a className="footer-brand" href="/">
+        <Link className="footer-brand" href="/">
           МАСТЕРСКАЯ МЯТЫЙ ЭЛЕМЕНТ
-        </a>
+        </Link>
         <div className="footer-links">
-          <a href="/gallery">Галерея</a>
-          <a href="/#contacts">Контакты</a>
+          <Link href="/gallery">Галерея</Link>
+          <Link href="/#contacts">Контакты</Link>
           <a href="tel:+79801560107">+7 980 156-01-07</a>
         </div>
       </div>
